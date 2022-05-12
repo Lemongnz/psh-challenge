@@ -10,19 +10,6 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const PORT = parseInt(process.env.PORT || "3001");
-
-// Middleware
-const logMiddleware = ({ method, url, body }, res, next) => {
-  console.log(
-    `Request: ${method} - ${url} - ${
-      method === "POST" ? JSON.stringify(body) : ""
-    }`
-  );
-  next();
-};
-
-app.use(logMiddleware);
-
 const appService = new AppService();
 
 // Route

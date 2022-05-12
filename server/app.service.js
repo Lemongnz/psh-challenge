@@ -29,8 +29,6 @@ export default class AppService {
           };
         });
 
-      console.log(devs);
-
       hackathon.devs = devs;
 
       delete hackathon.devsIds;
